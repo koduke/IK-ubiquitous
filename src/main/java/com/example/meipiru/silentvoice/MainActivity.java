@@ -1,0 +1,35 @@
+package com.example.meipiru.silentvoice;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btnDisp = (Button)findViewById(R.id.rokuon);
+        btnDisp.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // Sub 画面を起動
+                Intent intent = new Intent();
+                intent.setClassName("com.example.meipiru.silentvoice", "com.example.meipiru.silentvoice.SubActivity");
+                startActivity(intent);
+            }
+        });
+
+
+    }
+
+
+
+}
+
