@@ -9,15 +9,7 @@ import android.widget.ImageView;
 
 public class SubActivity extends AppCompatActivity {
 
-    public void b1(View v) {
-        // 画像の変更 （b1画像を設定）
-        ((ImageView) findViewById(R.id.sound)).setImageResource(R.drawable.ambulance);
-    }
-
-    public void b2(View v) {
-        // 画像の変更 （b1画像を設定）
-        ((ImageView) findViewById(R.id.sound)).setImageResource(R.drawable.bycycle);
-    }
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +24,16 @@ public class SubActivity extends AppCompatActivity {
             }
         });
 
+int num = 2;//ここの値によって表示する画像変更
 
+        switch (num){
+            case 1:
+                ((ImageView) findViewById(R.id.sound)).setImageResource(R.drawable.ambulance);
+                break;
+            case 2:
+                ((ImageView) findViewById(R.id.sound)).setImageResource(R.drawable.bycycle);
+                break;
+        }
 
     }
 }
